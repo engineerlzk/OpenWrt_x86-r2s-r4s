@@ -83,7 +83,7 @@ esac
 done
 
 REPO_BRANCH="$(curl -s https://api.github.com/repos/openwrt/openwrt/tags | jq -r '.[].name' | grep v21 | head -n 1 | sed -e 's/v//')"
-git clone -b v$REPO_BRANCH --depth 1 https://github.com/openwrt/openwrt
+git clone -b v$REPO_BRANCH https://github.com/openwrt/openwrt
 svn export https://github.com/kiddin9/OpenWrt_x86-r2s-r4s/trunk/devices openwrt/devices
 
 cd openwrt
@@ -111,8 +111,7 @@ if [ -f "devices/$firmware/diy.sh" ]; then
 fi
 cp -Rf ./diy/* ./
 if [ -f "devices/common/default-settings" ]; then
-	sed -i "s/10.0.0.1/$ip/" devices/common/default-settings
-	cp -f devices/common/default-settings package/*/*/my-default-settings/files/uci.defaults
+	sed -i 's/10.0.0.1/$ip/' package/*/*/my-default-settings/files/uci.defaults
 fi
 if [ -f "devices/$firmware/default-settings" ]; then
 	sed -i "s/10.0.0.1/$ip/" devices/$firmware/default-settings

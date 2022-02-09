@@ -22,23 +22,27 @@
 <a href="https://t.me/opwrts" target="_blank">Telegram</a>
 ### 特色:
 
-+ Cutting edge,openwrt官方openwrt-21.02分支版本, 与官方最新源码同步.
++ Cutting edge,openwrt官方openwrt-21.02分支版本, Kernel 5.10, 与官方最新源码同步.
 
 + 原生极致纯净,固件默认只包含基础上网功能, 后台在线选装插件,系统升级不丢失插件和配置.
 
 + 自建插件仓库囊括了市面上几乎所有开源插件,插件库日更,系统自动更新所有已安装插件.
 
++ 在线一键定制固件,可在[bf.supes.top](https://bf.supes.top)也可在后台系统定制升级菜单中一键定制, 同时支持github云编译和本地一键编译.
+
 + 后台一键OTA更新固件,省去了每次固件升级都需要找固件,下载固件,上传固件等繁琐操作.
 
-+ 替换 Uhttpd 为 Nginx, 支持 反向代理; WebDAV等诸多玩法.
++ 后台一键设置旁路由,一键开关IPv6.
+
++ 支持在线安装Kmod内核模块.
 
 + 重构版SSR-PLUS,国内外智能DNS解析,支持DOH,Trojan-Go等
+
++ 替换 Uhttpd 为 Nginx, 支持 反向代理; WebDAV等诸多玩法.
 
 + 性能,友好度,易用性,插件,以及针对国内特殊环境等的自定义优化, 开箱即用
 
 + 自定制清爽Material风格新主题Edge
-
-+ 无需专业知识,无需linux服务器,人人皆可通过云编译定制编译自己的专属固件.
 
 
 | 设备           | 固件下载                                             | 🐳 Docker |说明                                 |
@@ -48,6 +52,7 @@
 | NanoPi-R4S    | [📥](https://op.supes.top/firmware/nanopi-r4s/) | [kiddin9/openwrt-nginx:nanopi-r4s](https://hub.docker.com/r/kiddin9/openwrt-nginx)   |
 | Raspberry Pi 4B (树莓派4B)| [📥](https://op.supes.top/firmware/Rpi-4B/)  | [kiddin9/openwrt-nginx:rpi-4b](https://hub.docker.com/r/kiddin9/openwrt-nginx)   |
 
+####  固件下载与定制: [https://bf.supes.top](https://bf.supes.top)
 
 #### 后台入口 op/ 或 10.0.0.1 &nbsp;(若后台无法打开,请插拔交换wan,lan网线顺序.)
 
